@@ -1,0 +1,166 @@
+@import url(/reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+.flex {
+  display: flex;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #000;
+}
+header {
+  background: #000;
+  margin-bottom: 30px;
+}
+header img {
+  margin: 20px 30px;
+}
+
+/*  */
+.swiper {
+  background: #000;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.swiper h1 {
+  color: #fff;
+  padding: 50px 0px;
+}
+.swiper-slide {
+  position: relative;
+  width: 350px;
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-wrapper {
+  justify-content: space-between;
+}
+.image {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  height: 100%;
+  object-fit: cover;
+}
+/* .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #000000;
+}
+.more {
+  border: 1px solid white;
+  color: #000;
+  background: #fff;
+}
+.res {
+  border: 1px solid #ed3124;
+  background: #ed3124;
+} */
+.more span,
+.res span {
+  display: block;
+  width: 150px;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 10px 20px;
+  margin: 10px auto;
+  /* border: 1px solid #000; */
+
+}
+
+.more span {
+  display: block;
+  border: 1px solid white;
+  color: #000;
+  background: #fff;
+}
+.res span {
+  border: 1px solid #ed3124;
+  background: #ed3124;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #000;
+}
+
+.swiper-slide:hover .bg {
+  opacity: 0.7;
+  transition: .35s;
+}
+
+.text {
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease;
+  text-align: center;
+  width: 90%;
+  height: 400px;
+  z-index: 999;
+  opacity: 0;
+}
+.swiper-slide:hover .text{
+  opacity: 1;
+}
+
+.text b {
+  font-size: 26px;
+  display: block;
+  height: 30px;
+}
+.text p {
+  font-size: 14px;
+  word-break: keep-all;
+  height: 275px;
+  display: table-cell;
+  vertical-align: middle;
+  line-height: 1.5;
+}
+.more,
+.res {
+  display: block;
+  width: 150px;
+  border-radius: 5px;
+  font-size: 15px;
+  margin: 10px auto;
+}
+.more:hover span, .res:hover span {
+    opacity: 0.8;
+transition: .35s;
+}
+/*  */
+/* .button {
+  position: absolute;
+  background: white;
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  opacity: 0.5;
+} */
