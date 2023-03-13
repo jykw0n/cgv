@@ -1,0 +1,159 @@
+@import url(/reset.css);
+@import url(./global.css);
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+.flex {
+  display: flex;
+}
+
+/* 스크롤바 생기는 게 아마도 앱솔루트 밖으로 빼놓은 게 있어서라는데
+어디가 문제인지...나중에 찾아보기  */
+
+/* ------------------------ */
+.specialWrap {
+  /* width: 1280px; margin: auto; */
+  border: 1px solid #000;
+  
+}
+
+.specialWrap .desc {
+  text-align: center;
+  border: 1px solid #000;
+  /* padding: 50px; */
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  line-height: 1.7;
+}
+
+.specialHall {
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+}
+.specialHall > div {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.specialHall figure {
+  height: 700px;
+  background: no-repeat;
+  background-size: cover;
+}
+
+.specialHall img {
+  color: #fff;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  transform: translate(-10%, -10%);
+}
+
+.imax figure {
+  background-image: url(./images/궁극의\ 몰입감.png);
+  background-size: 1400px 700px;
+  background-position-x: 63%;
+}
+.fourdx figure {
+  background-image: url(./images/4dx.png);
+  background-position-x: 60%;
+}
+.screenx figure {
+  background-image: url(./images/screenx.jpg);
+  background-size: 1200px 700px;
+  background-position-x: 50%;
+}
+.cinedechef figure {
+  background-image: url(./images/specialtheater_cdc_3.jpg);
+  background-position-x: 70%;
+}
+
+.specialHall > div:hover figure {
+  transform: scale(1.2);
+  transition: 1s;
+  opacity: 0.5;
+}
+
+.specialHall > div::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  transition: 1s;
+}
+
+.specialHall p{z-index: 1;
+display: block;
+height: 50px;
+/* border: 1px solid #000; */
+position: absolute;
+color: #fff;
+font-size: 16px;
+top: 90%; 
+left: 10%;
+}
+
+span.more {
+  /* display: block; */
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -55%);
+  text-align: center;
+
+  padding: 35px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+
+  opacity: 0;
+}
+
+.specialHall > div:hover span.more {
+  opacity: 1;
+  transition: 1s;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* ------------스크롤---------------- */
+
+.scroll {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll img {
+  /* display: inline-block; */
+  opacity: 0.6;
+  animation: scrollani 1s linear infinite alternate;
+}
+
+@keyframes scrollani {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
+
+/* --------------스크롤---------------- */
+
+
